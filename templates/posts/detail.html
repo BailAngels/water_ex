@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>{{ post.title }}</h1>
+     <img src="{{ post.image.url }}" alt="RAaf" style="width: 100px; height: 100px;">
+    <h3>{{ post.description }}</h3>
+    <p>{{ post.created_at }}</p>
+    <a href="{% url 'post_delete' post.id %}">DELETE</a>
+    <a href="{% url 'post_update' post.id %}">UPDATE</a>
+</body>
+</html>

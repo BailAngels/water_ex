@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>homepage</title>
+</head>
+<body>
+    {% for post in post_list %}
+        <h1>{{ post.title }}</h1>
+        <img src="{{ post.image.url }}" alt="RAaf" style="width: 100px; height: 100px;">
+        <a href="{% url 'post_detail' post.id %}">{{ post.description }}</a>
+        <p>{{ post.created_at }}</p>
+    {% endfor %}
+    <a href="{% url 'post_create'%}">CREATE</a>
+</body>
+</html>
